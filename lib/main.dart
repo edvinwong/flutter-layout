@@ -34,8 +34,8 @@ class _MyHomePageState extends State<MyHomePage> {
   List items = [];
 
   Future<void> getJson() async {
-    final String response =
-        await rootBundle.loadString('MOCK_DATA for Flutter layouting.json');
+    final String response = await rootBundle
+        .loadString('assets/MOCK_DATA for Flutter layouting.json');
     final data = await json.decode(response);
     setState(() {
       items = data;
@@ -68,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           children: [
             ElevatedButton(
-              child: const Text('Load Data'),
+              child: const Text('List'),
               onPressed: getJson,
             ),
 
